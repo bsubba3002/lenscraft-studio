@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services • LensCraft Studio</title>
+
+  <!-- ✅ Inline CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      color: #d1d5db;
+    }
+
+    /* Section */
+    .services-section {
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .services-section h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      animation: flipIn 1s ease-in-out forwards;
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      text-align: left;
+      animation: flipIn 1s ease-in-out forwards;
+    }
+
+    .service-card h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      color: #6b7280;
+      font-size: 1rem;
+    }
+
+    .badge {
+      margin-top: 1rem;
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      border-radius: 9999px;
+    }
+
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* Animations */
+    @keyframes flipIn {
+      0% { transform: rotateY(90deg); opacity: 0; }
+      100% { transform: rotateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav>
+    <div style="font-size: 1.5rem; font-weight: bold;">LensCraft</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ✅ Services Section -->
+  <section class="services-section">
+    <h1>Our Services</h1>
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card" style="animation-delay: 0.2s;">
+        <h2>Wedding Photography</h2>
+        <p>From pre-wedding shoots to the final vows, we capture timeless wedding memories with elegance and care.</p>
+        <span class="badge">Starts ₹75,000</span>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card" style="animation-delay: 0.4s;">
+        <h2>Portrait Sessions</h2>
+        <p>Individual, family, or professional portraits in studio or outdoor settings — perfectly lit and styled.</p>
+        <span class="badge">Starts ₹10,000</span>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card" style="animation-delay: 0.6s;">
+        <h2>Commercial & Branding</h2>
+        <p>High-impact visuals for products, fashion, or brands. Studio setups or on-location campaigns.</p>
+        <span class="badge">Contact for quote</span>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card" style="animation-delay: 0.8s;">
+        <h2>Event Coverage</h2>
+        <p>Capture your live moments at conferences, shows, corporate events, and private parties in vivid detail.</p>
+        <span class="badge">Starts ₹25,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    &copy; 2025 LensCraft Studio. All rights reserved.
+  </footer>
+
+</body>
+</html>

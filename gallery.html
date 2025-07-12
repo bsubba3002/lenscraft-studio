@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery • LensCraft Studio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      color: #d1d5db;
+    }
+
+    /* Category Menu */
+    .categories {
+      padding: 3rem 1.5rem 1rem;
+      text-align: center;
+    }
+    .categories h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    .category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .category-buttons a {
+      background: #000;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .category-buttons a:hover {
+      background: #4b5563;
+    }
+
+    /* Gallery Sections */
+    .gallery-section {
+      padding: 3rem 1.5rem;
+    }
+    .gallery-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: flipIn 1s ease-in-out forwards;
+    }
+
+    .gallery-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      animation: flipIn 1s ease-in-out forwards;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(40%) brightness(95%) contrast(85%);
+      transition: all 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0%) brightness(85%) contrast(110%);
+    }
+
+    @media (min-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* Animation */
+    @keyframes flipIn {
+      0% { transform: rotateY(90deg); opacity: 0; }
+      100% { transform: rotateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav>
+    <div style="font-size: 1.5rem; font-weight: bold;">LensCraft</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ✅ Category Navigation -->
+  <section class="categories">
+    <h1>Browse By Category</h1>
+    <div class="category-buttons">
+      <a href="#wedding">Wedding</a>
+      <a href="#portraits">Portraits</a>
+      <a href="#products">Products</a>
+      <a href="#events">Events</a>
+    </div>
+  </section>
+
+  <!-- ✅ Wedding Section -->
+  <section class="gallery-section" id="wedding">
+    <h2>Wedding Moments</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?wedding,bride" alt="Wedding"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?wedding,couple" alt="Wedding"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?wedding,ceremony" alt="Wedding"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?wedding,indian" alt="Wedding"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?wedding,dance" alt="Wedding"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?wedding,kiss" alt="Wedding"></div>
+    </div>
+  </section>
+
+  <!-- ✅ Portrait Section -->
+  <section class="gallery-section" id="portraits">
+    <h2>Studio & Lifestyle Portraits</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?portrait,woman" alt="Portrait"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?portrait,man" alt="Portrait"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?portrait,model" alt="Portrait"></div>
+    </div>
+  </section>
+
+  <!-- ✅ Products Section -->
+  <section class="gallery-section" id="products">
+    <h2>Product & Commercial Shots</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?product,shoes" alt="Product"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?product,watch" alt="Product"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?product,cosmetic" alt="Product"></div>
+    </div>
+  </section>
+
+  <!-- ✅ Events Section -->
+  <section class="gallery-section" id="events">
+    <h2>Live Events & Candid Coverage</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?event,photography" alt="Event"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?event,stage" alt="Event"></div>
+      <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?event,speaker" alt="Event"></div>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    &copy; 2025 LensCraft Studio. All rights reserved.
+  </footer>
+
+</body>
+</html>
